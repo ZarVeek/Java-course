@@ -1,4 +1,4 @@
-package ru.CatsAndFood;
+package ru.Lesson7_CatsAndFood;
 
 class Cats {
 

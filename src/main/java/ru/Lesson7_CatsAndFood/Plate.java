@@ -1,6 +1,4 @@
-package ru.CatsAndFood;
-
-import java.util.Random;
+package ru.Lesson7_CatsAndFood;
 
 class Plate {
 

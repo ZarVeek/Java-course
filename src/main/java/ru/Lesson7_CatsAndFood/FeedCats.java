@@ -1,6 +1,4 @@
-package ru.CatsAndFood;
-
-import com.sun.javafx.image.BytePixelSetter;
+package ru.Lesson7_CatsAndFood;
 
 import java.util.Random;
 import java.util.Scanner;
