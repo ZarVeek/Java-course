@@ -2,9 +2,9 @@ package ru.Lesson7_CatsAndFood;
 
 class Cats {
 
-    String name;
-    Boolean satiety;
-    int appetite;
+    private String name;
+    private Boolean satiety;
+    private int appetite;
 
     protected Cats(String name, Boolean satiety, int appetite){
         this.appetite = appetite;
@@ -18,5 +18,9 @@ class Cats {
 
     public int getAppetite() {
         return appetite;
+    }
+
+    public void setSatiety(Boolean satiety) {
+        this.satiety = satiety;
     }
 }
