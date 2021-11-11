@@ -1,10 +1,9 @@
 package ru.Lesson7_CatsAndFood;
 
-class Plate {
-
+public class Plate {
     private int food;
 
-    Plate (int food){
+    public Plate(int food) {
         this.food = food;
     }
 
@@ -12,11 +11,20 @@ class Plate {
         return food;
     }
 
-    void decreaseFood(int eatenFood){
-        food -= eatenFood;
+    public boolean decreaseFood(int n) {
+        if (food >= n) {
+            food -= n;
+            return true;
+        }
+        return false;
     }
 
+
     void increaseFood(int addFood){
-        food += addFood;
+        if (addFood > 0) {
+            food += addFood;
+        }
     }
+
+
 }
