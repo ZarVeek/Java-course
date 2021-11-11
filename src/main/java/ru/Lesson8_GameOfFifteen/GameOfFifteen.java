@@ -1,4 +1,4 @@
-package ru.Lesson8;
+package ru.Lesson8_GameOfFifteen;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -211,6 +211,4 @@ public class GameOfFifteen extends JPanel {
             frame.setVisible(true);
         });
     }
-
-
 }
