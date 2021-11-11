@@ -1,4 +1,4 @@
-package ru.Lesson_GameOfFifteen;
+package ru.L8_GameOfFifteen;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 
-public class GameOfFifteen extends JPanel {
+public class l8_GameOfFifteen extends JPanel {
 
     private final int size;
     private final int nbTiles;
@@ -28,7 +28,7 @@ public class GameOfFifteen extends JPanel {
     private final int gridSize;
     private boolean gameOver = true;
 
-    public GameOfFifteen(int size, int dim, int mar) {
+    public l8_GameOfFifteen(int size, int dim, int mar) {
         this.size = size;
         margin = mar;
 
@@ -159,6 +159,7 @@ public class GameOfFifteen extends JPanel {
                 continue;
             }
 
+            // for other tiles
             g.setColor(getForeground());
             g.fillRoundRect(x, y, tileSize, tileSize, 25, 25);
             g.setColor(Color.BLACK);
@@ -180,6 +181,7 @@ public class GameOfFifteen extends JPanel {
     }
 
     private void drawCenteredString(Graphics2D g, String s, int x, int y) {
+        // center string s for the given tile (x,y)
         FontMetrics fm = g.getFontMetrics();
         int asc = fm.getAscent();
         int desc = fm.getDescent();
@@ -202,10 +204,13 @@ public class GameOfFifteen extends JPanel {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setTitle("Game of Fifteen");
             frame.setResizable(false);
-            frame.add(new GameOfFifteen(4, 550, 30), BorderLayout.CENTER);
+            frame.add(new l8_GameOfFifteen(4, 550, 30), BorderLayout.CENTER);
             frame.pack();
+            // center on the screen
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
         });
     }
+
+
 }
