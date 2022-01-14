@@ -2,25 +2,28 @@ package ru.Lesson7_CatsAndFood;
 
 class Cats {
 
-    private String name;
+    private final String name;
     private Boolean satiety;
     private int appetite;
 
-    protected Cats(String name, Boolean satiety, int appetite){
+    protected Cats(final String name, final int appetite){
         this.appetite = appetite;
         this.name = name;
-        this.satiety = satiety;
+        this.satiety = false;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAppetite() {
-        return appetite;
+    public void eat(Plate plate) {
+        if (satiety)// сытый котик не будет кушать
+            return;
+        this.satiety = plate.decreaseFood(appetite); // если удалось утолить аппетит, котик сыт, иначе - нет
     }
 
-    public void setSatiety(Boolean satiety) {
-        this.satiety = satiety;
+    public String f() {
+        return "Котик " + name + (satiety ? " сыт" : " голоден");
     }
 }
+

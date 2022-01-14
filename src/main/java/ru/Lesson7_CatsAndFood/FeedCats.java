@@ -12,18 +12,18 @@ public class FeedCats{
         cat[1] = new Cats("Барсик2", false, 20);
         cat[2] = new Cats("Барсик3", false, 30);
 
-        System.out.println("У нас есть три кота:" + cat[0].getName() + ", " + cat[1].getName() + ", " + cat[2].getName() + "\n");
+        System.out.println("У нас есть три кота:" + cat[0].name + ", " + cat[1].name + ", " + cat[2].name + "\n");
 
         Plate plate = new Plate(new Random().nextInt(50 - 1) + 1);
         System.out.println(("В тарелке " + plate.getFood()) + "г корма" + "\n");
 
 
         for (int i = 0; i < cat.length; i++) {
-            System.out.println("Идёт кушать " + cat[i].getName());
-            if (plate.getFood() >= cat[i].getAppetite()) {
-                plate.decreaseFood(cat[i].getAppetite());
-                cat[i].setSatiety(true);
-                System.out.println( cat[i].getName() +" поел и тарелке осталось " + plate.getFood() + "г корма");
+            System.out.println("Идёт кушать " + cat[i].name);
+            if (plate.getFood() >= cat[i].appetite) {
+                plate.decreaseFood(cat[i].appetite);
+                cat[i].satiety = true;
+                System.out.println( cat[i].name +" поел и тарелке осталось " + plate.getFood() + "г корма");
             }
             else {
                 System.out.println(("В тарелке слишком мало еды для " + cat[i].getName()) + ". Хотите ли добавить корма? (да/нет)");
